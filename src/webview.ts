@@ -71,7 +71,7 @@ export class SMLView {
 
     private _generateHTML(smlCode: string) {
 
-        let smlResult = smlCode.split(';').map((program) => this._evaluateProgram(program + ';'));
+        let smlResult = smlCode.split(';').map((program) => this._evaluateProgram(program.trim() + ';'));
 
         let styleSheet = `<style> code { font-family: monospace; color: black; font-weight: 600; } div { border-radius: 5px; border: 1px solid grey; padding: 3px; margin: 3px; } .div-0 { background-color: deepskyblue; } .div-1 { background-color: lawngreen; } .div-2 { background-color: teal; } .div-3 { background-color: yellowgreen; } .div-4 { background-color: darkviolet; } .div-error { background-color: black; color: crimson;} </style>`;
 
