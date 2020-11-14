@@ -17,8 +17,8 @@ export class SMLView {
     };
     private _interpreterState: State = getFirstState(undefined, this._interpreterOptions);
     private _printOptions: PrintOptions = {
-        boldText: ((text: string) => `<b>${text}</b>`),
-        italicText: ((text: string) => `<i>${text}</i>`),
+        boldText: ((text: string) => text.bold()),
+        italicText: ((text: string) => text.italics()),
         showTypeVariablesAsUnicode: true,
         stopId: this._interpreterState.id + 1
     };
